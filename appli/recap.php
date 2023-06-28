@@ -29,15 +29,13 @@
                                 <span>
                                     <?php 
                                         $nbrArticles = 0;
-                                        $notifArticles = 0;
                                         if(isset($_SESSION['products'])){
                                             foreach($_SESSION['products'] as $index => $product){
                                                 $nbrArticles = $index + 1;
-                                                $notifArticles = empty($index) ? $nbrArticles: 0 ;
                                             }
-                                            echo $notifArticles;
+                                            echo $nbrArticles;
                                         }else{
-                                            echo $notifArticles;
+                                            echo $nbrArticles;
                                         }
                                     ?>
                                 </span>
