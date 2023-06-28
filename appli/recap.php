@@ -19,13 +19,28 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
+                    <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav flex-navbar">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="index.php">Ajout Produit</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item notif-articles-flex">
                                 <a class="nav-link" href="recap.php">Mon panier</a>
+                                <span>
+                                    <?php 
+                                        $nbrArticles = 0;
+                                        $notifArticles = 0;
+                                        if(isset($_SESSION['products'])){
+                                            foreach($_SESSION['products'] as $index => $product){
+                                                $nbrArticles = $index + 1;
+                                                $notifArticles = empty($index) ? $nbrArticles: 0 ;
+                                            }
+                                            echo $notifArticles;
+                                        }else{
+                                            echo $notifArticles;
+                                        }
+                                    ?>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -58,8 +73,8 @@
                                     "<td class='center-content-array'>".number_format($product['total'],2,",", "&nbsp;")."&nbsp;€</td>",
                                 "</tr>";
                                 $totalGeneral += $product['total'];
-                        }
-                        echo    "<tr>",
+                    }
+                    echo        "<tr>",
                                     "<td colspan=4>Total général : </td>",
                                     "<td class='center-content-array'><strong>".number_format($totalGeneral, 2, ",", "&nbsp;")."&nbsp;€</strong></td>",
                                 "</tr>",

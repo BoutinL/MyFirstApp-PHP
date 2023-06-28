@@ -16,12 +16,12 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav flex-navbar">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.php">Ajout Produit</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item notif-articles-flex">
                             <a class="nav-link" href="recap.php">Mon panier</a>
                             <span>
                                 <?php 

@@ -5,13 +5,19 @@ main{
 
 .flex-navbar{
 	display: inline-flex;
-	width: 100%;
+	width: 90%;
 	justify-content: space-between;
 }
 
 .flex-form{
 	display: flex;
 	justify-content: center;
+}
+
+.notif-articles-flex{
+	display: inline-flex;
+	align-items: center;
+
 }
 
 h1{
