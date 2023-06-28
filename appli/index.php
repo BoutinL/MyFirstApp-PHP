@@ -23,6 +23,22 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="recap.php">Mon panier</a>
+                            <span>
+                                <?php 
+                                    session_start();
+                                    $nbrArticles = 0;
+                                    $notifArticles = 0;
+                                    if(isset($_SESSION['products'])){
+                                        foreach($_SESSION['products'] as $index => $product){
+                                            $nbrArticles = $index + 1;
+                                            $notifArticles = empty($index) ? $nbrArticles: 0 ;
+                                        }
+                                        echo $notifArticles;
+                                    }else{
+                                        echo $notifArticles;
+                                    }
+                                ?>
+                            </span>
                         </li>
                     </ul>
                 </div>

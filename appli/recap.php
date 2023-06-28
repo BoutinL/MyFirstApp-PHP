@@ -25,7 +25,7 @@
                                 <a class="nav-link active" aria-current="page" href="index.php">Ajout Produit</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="recap.php">Mon panier</a><span><?php count($_SESSION) ?></span>
+                                <a class="nav-link" href="recap.php">Mon panier</a>
                             </li>
                         </ul>
                     </div>
