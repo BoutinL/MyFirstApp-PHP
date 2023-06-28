@@ -27,9 +27,6 @@
                                 <?php 
                                     session_start();
                                     $nbrArticles = 0;
-
-                                    // var_dump($_SESSION["products"]);
-
                                     if(isset($_SESSION['products'])){
                                         foreach($_SESSION['products'] as $index => $product){
                                             $nbrArticles = $index + 1;

@@ -40,18 +40,20 @@ if(isset($_GET["action"])){
                 // afficher ce produit n'existe pas!
             }
             break;
-
-        // Ajouter un produit déja présent au panier
-        case "moinsProduit":
-            if(isset($_GET['id']) && isset($_SESSION["products"][$_GET['id']])){
-                
-                header("Location:recap.php"); exit;
-            }
-            break;
             
         // Supprimer un produit déja présent au panier
         case "plusProduit":
         
+            break;
+
+        // Ajouter un produit déja présent au panier
+        case "moinsProduit":
+            if(isset($_GET['id']) && isset($_SESSION["products"][$_GET['id']])){
+                foreach($_SESSION['products'] as $index => $product){
+                    $product['qtt']++;
+                }
+                header("Location:recap.php"); exit;
+            }
             break;
     }
 

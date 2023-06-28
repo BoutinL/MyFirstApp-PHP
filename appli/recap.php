@@ -63,11 +63,12 @@
                             "<tbody>";
                     $totalGeneral = 0;
                     foreach($_SESSION['products'] as $index => $product){
+                        var_dump($product);
                             echo"<tr>",
                                     "<td class='center-content-array'>".$index."</td>",
-                                    "<td class='center-content-array td-flex'>".$product['name']."<a href='traitement.php?action=supprimerProduit&id=$index' class='btn btn-danger nbr-btn' name='delet'>X</a></td>",
+                                    "<td class='center-content-array td-flex'>".$product['name']."<a href='traitement.php?action=supprimerProduit&id=$index' class='btn btn-danger nbr-btn'>X</a></td>",
                                     "<td class='center-content-array'>".number_format($product['price'],2,",", "&nbsp;")."&nbsp;€</td>",
-                                    "<td class='center-content-array td-flex'><a href='traitement.php?action=moinsProduit' class='btn btn-warning nbr-btn text-white'> - </a>".$product['qtt']."<a href='traitement.php?action=plusProduit' class='btn btn-success nbr-btn'> + </a></td>",
+                                    "<td class='center-content-array td-flex'><a href='traitement.php?action=moinsProduit' class='btn btn-warning nbr-btn text-white'> - </a>".$product['qtt']."<a href='traitement.php?action=plusProduit&id=$index' class='btn btn-success nbr-btn'> + </a></td>",
                                     "<td class='center-content-array'>".number_format($product['total'],2,",", "&nbsp;")."&nbsp;€</td>",
                                 "</tr>";
                                 $totalGeneral += $product['total'];
