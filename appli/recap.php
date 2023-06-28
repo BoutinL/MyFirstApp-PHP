@@ -67,7 +67,7 @@
                                     "<td class='center-content-array'>".$index."</td>",
                                     "<td class='center-content-array'>".$product['name']."</td>",
                                     "<td class='center-content-array'>".number_format($product['price'],2,",", "&nbsp;")."&nbsp;€</td>",
-                                    "<td class='center-content-array'>".$product['qtt']."</td>",
+                                    "<td class='center-content-array td-flex'><a href='traitement.php?action=supprimerProduit' class='btn btn-danger nbr-btn'> - </a>".$product['qtt']."<a href='traitement.php?action=ajouterProduit' class='btn btn-success nbr-btn'> + </a></td>",
                                     "<td class='center-content-array'>".number_format($product['total'],2,",", "&nbsp;")."&nbsp;€</td>",
                                 "</tr>";
                                 $totalGeneral += $product['total'];

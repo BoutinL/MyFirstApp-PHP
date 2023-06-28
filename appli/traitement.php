@@ -4,7 +4,9 @@
 if(isset($_GET["action"])){
 
     switch($_GET["action"]) {
+
         case "ajouterProduit":
+
             if(isset($_POST['submit'])){
     
                 $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -21,17 +23,21 @@ if(isset($_GET["action"])){
                     
                     $_SESSION['products'][] = $product;
                 }
-                
+
                 header("Location:recap.php"); exit;
             }
             break;
 
-            case "viderPanier":
-                unset($_SESSION["products"]);
-                header("Location:recap.php"); exit;
-                break;
-            case "supprimerProduit":
-                break;
+        case "viderPanier":
+            unset($_SESSION["products"]);
+            header("Location:recap.php"); exit;
+            break;
+
+        case "supprimerProduit":
+            if(isset($_POST['submit'])){
+                
+            }
+            break;
     }
 
 } else {
