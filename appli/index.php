@@ -19,10 +19,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav flex-navbar">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php">Ajout Produit</a>
+                            <a class="nav-link active" aria-current="page" href="index.php">Ajout</a>
                         </li>
                         <li class="nav-item notif-articles-flex">
-                            <a class="nav-link" href="recap.php">Mon panier</a>
+                            <a class="nav-link" href="recap.php">Panier</a>
                             <span>
                                 <?php 
                                     session_start();
@@ -48,7 +48,7 @@
     <main>
         <h1>Ajouter un produit</h1>
         <div class="form-group flex-form">
-            <form action="traitement.php" method="post">
+            <form action="traitement.php?action=ajouterProduit" method="post">
                 <p>
                     <label>
                         Nom du produit :

@@ -22,10 +22,10 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav flex-navbar">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.php">Ajout Produit</a>
+                                <a class="nav-link active" aria-current="page" href="index.php">Ajout</a>
                             </li>
                             <li class="nav-item notif-articles-flex">
-                                <a class="nav-link" href="recap.php">Mon panier</a>
+                                <a class="nav-link" href="recap.php">Panier</a>
                                 <span>
                                     <?php 
                                         $nbrArticles = 0;
@@ -50,7 +50,7 @@
         <section class="array-panier">
             <?php
                 if(!isset($_SESSION['products']) || empty($_SESSION['products'])){
-                    echo "<p>Auncun produit en session...</p>";
+                    echo "<p class='session-vide'>Auncun produit en session...</p>";
                 }else{
                     echo"<table class='table table-bordered'>",
                             "<thead>",
@@ -83,6 +83,8 @@
                 }
             ?>
         </section>
+
+        <a href="traitement.php?action=viderPanier" class="btn btn-danger">Vider le panier</a>
     </main>
 </body>
 </html>

@@ -34,3 +34,9 @@ h1{
 .center-content-array{
 	text-align: center;
 }
+
+.session-vide{
+	text-align: center;
+	padding-top: 10%;
+	font-size: 20px;
+}
