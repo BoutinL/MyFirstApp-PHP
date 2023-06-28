@@ -1,0 +1,30 @@
+main{
+	background-color: aliceblue;
+	min-height: 100vh;
+}
+
+.flex-navbar{
+	display: inline-flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.flex-form{
+	display: flex;
+	justify-content: center;
+}
+
+h1{
+	text-align: center;
+	padding-top: 3% ;
+	padding-bottom: 3% ;
+}
+
+.btn-form{
+	width: 100%;
+	padding: 5%;
+}
+
+.center-content-array{
+	text-align: center;
+}
