@@ -42,17 +42,17 @@ if(isset($_GET["action"])){
             break;
             
         // Supprimer un produit déja présent au panier
-        case "plusProduit":
+        case "moinsProduit":
         
             break;
 
         // Ajouter un produit déja présent au panier
-        case "moinsProduit":
+        case "plusProduit":
             if(isset($_GET['id']) && isset($_SESSION["products"][$_GET['id']])){
                 foreach($_SESSION['products'] as $index => $product){
                     $product['qtt']++;
+                    header("Location:recap.php"); exit;
                 }
-                header("Location:recap.php"); exit;
             }
             break;
     }
